@@ -1,0 +1,140 @@
+.fade-enter-active,
+.fade-leave-active{
+    transition: opacity .4s ease-in-out;
+}
+
+.fade-enter,
+.fade-leave-to{
+    opacity: 0;
+}
+
+.control-enter-active,
+.control-leave-active{
+    transition: all 1s ease-in-out;
+}
+
+.control-enter,
+.control-leave-to{
+    opacity: 0;
+}
+
+.control-enter{
+    transform: translateX(100%);
+}
+
+.control-leave-to{
+    transform: translateX(-100%);
+}
+
+.Left-enter-active,
+.Left-leave-active{
+    transition: all .8s ease-in-out;
+}
+
+.Left-enter,
+.Left-leave-to{
+    opacity: 0;
+}
+
+.Left-enter{
+    transform: translateX(-100%);
+}
+
+.Left-leave-to{
+    transform: translateX(100%);
+}
+
+.Bottom-enter-active,
+.Bottom-leave-active{
+    transition: all .8s ease-in-out;
+}
+
+.Bottom-enter,
+.Bottom-leave-to{
+    opacity: 0;
+}
+
+.Bottom-enter{
+    transform: translateY(100%);
+}
+
+.Bottom-leave-to{
+    transform: translateY(-100%);
+}
+
+.Top-enter-active,
+.Top-leave-active{
+    transition: all .8s ease-in-out;
+}
+
+.Top-enter,
+.Top-leave-to{
+    opacity: 0;
+}
+
+.Top-enter{
+    transform: translateY(-100%);
+}
+
+.Top-leave-to{
+    transform: translateY(100%);
+}
+
+.Right-enter-active,
+.Right-leave-active{
+    transition: all .8s ease-in-out;
+}
+
+.Right-enter,
+.Right-leave-to{
+    opacity: 0;
+}
+
+.Right-enter{
+    transform: translateX(100%);
+}
+
+.Right-leave-to{
+    transform: translateX(-100%);
+}
+
+.message-enter-active,
+.message-leave-active{
+    transition: all 1s ease-in-out;
+}
+
+.message-enter,
+.message-leave-to{
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes initLink {
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes linkSelect {
+    from{
+        stroke-dashoffset: -100%;
+    }
+}
+
+@keyframes linkRemove {
+    from{
+        stroke-dashoffset: 0;
+    }
+}

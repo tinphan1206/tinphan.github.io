@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    user-select: none;
+}
+
+.app-header{
+    background-color: whitesmoke;
+    box-shadow: 2px 3px 7px rgba(1, 1, 1, .5);
+}
+
+.element{
+    position: absolute;
+    width: 100px;
+    z-index: 1;
+    animation: fadeIn .4s forwards;
+}
+
+.element .nodes{
+    width: 100px;
+    height: 100px;
+    background-color: whitesmoke;
+    border: 2px solid green;
+    border-radius: 50%;
+    overflow: hidden;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.element .node{
+    display: flex;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-color: green;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.element .node[data-id = '1']{
+    top: 0;
+    left: 0;
+}
+
+.element .node[data-id = '2']{
+    top: 0;
+    left: 50%;
+}
+
+.element .node[data-id = '3']{
+    top: 50%;
+    left: 50%;
+}
+
+.element .node[data-id = '4']{
+    top: 50%;
+    left: 0;
+}
+
+.element .node[data-id = '1'] span{
+    transform: rotate(-45deg) translateY(5px);
+}
+
+
+.element .node[data-id = '2'] span{
+    transform: rotate(-45deg) translateX(-5px);
+}
+
+.element .node[data-id = '3'] span{
+    transform: rotate(-45deg) translateY(-5px);
+}
+
+.element .node[data-id = '4'] span{
+    transform: rotate(-45deg) translateX(5px);
+}
+
+.element.selected{
+    z-index: 10;
+}
+
+.element.remove{
+    animation: fadeOut .4s forwards;
+}
+
+.element button{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.link-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.link{
+    fill: transparent;
+    stroke: #0c5460;
+    stroke-width: 5px;
+    stroke-linecap: round;
+    animation: initLink .4s forwards;
+    cursor: pointer;
+}
+
+.link.selected{
+    stroke: red;
+    stroke-dasharray: 10;
+    animation: linkSelect 20s infinite linear;
+}
+
+.link.remove{
+    animation: linkRemove .4s forwards;
+}
+
+.clone{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f74a8;
+    color: white;
+    z-index: 11;
+    pointer-events: none;
+}
+
+.modal{
+    display: block;
+    background-color: rgba(1, 1, 1, .8);
+    animation: fadeIn .5s forwards;
+}
+
+.modal-dialog{
+    max-width: 90%;
+}
+
+.close{
+    cursor: pointer;
+}
+
+.view-mode{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s forwards;
+}
+
+.view-header{
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+
+.view-content{
+    background-color: whitesmoke;
+    width: 90%;
+    height: 60%;
+    border-radius: 10px;
+    padding: 10px;
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.control-item{
+    position: absolute;
+    left: 90%;
+    top: 70%;
+}
+
+.control-link:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.view{
+    width: 29%;
+    height: 40%;
+    position: absolute;
+    top: 150px;
+    right: 75px;
+    zoom: .3;
+}
+
+.red{
+    background-color: red !important;
+}
+
+.message{
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    padding: 5px 10px;
+    color: whitesmoke;
+    border-radius: 3px;
+    z-index: 10000;
+}
+
+.message.error{
+    background-color: #ff3013;
+    box-shadow: 1px 5px 7px rgba(1, 1, 1, .5);
+}
+
+.message.success{
+    background-color: #00c700;
+    box-shadow: 1px 5px 7px rgba(1, 1, 1, .5);
+}
+
+.message.primary{
+    background-color: #007be8;
+    box-shadow: 1px 5px 7px rgba(1, 1, 1, .5);
+}
