@@ -1,7 +1,5 @@
 let EventBus = new Vue();
 
-// áđâsđâsd
-
 new Vue({
     el: '#app',
     data(){
